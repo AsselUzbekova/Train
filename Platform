@@ -1,0 +1,20 @@
+package railwaycarriage;
+
+class Platform extends FreightRC {
+
+    private double weight = 40.0;
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+/*    @Override
+    void adding() {
+        freightWagon.add("Platform");
+        System.out.print(freightWagon);
+    }   */
+}
