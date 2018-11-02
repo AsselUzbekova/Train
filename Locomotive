@@ -1,0 +1,21 @@
+package railwaycarriage;
+
+public class Locomotive extends PassengerRC {
+
+    private double power = 11400.0;
+
+    public double getPower() {
+        return power;
+    }
+
+    public void setPower(double power) {
+        this.power = power;
+    }
+
+/*    @Override
+    void adding() {
+        passengerWagon.add("Locomotive");
+        System.out.print(passengerWagon);
+    }   */
+
+}
