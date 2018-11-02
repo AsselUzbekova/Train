@@ -1,0 +1,45 @@
+package railwaycarriage;
+
+import java.util.LinkedList;
+
+public class Train {
+
+    public static void main(String[] args) {
+        Locomotive locomotive = new Locomotive();
+        Coupe coupe = new Coupe();
+        ReservedSeat rs = new ReservedSeat();
+        Platform platform = new Platform();
+        Cistern cistern = new Cistern();
+
+        System.out.println("Train composition:\n");
+        
+        LinkedList<Object> chain = new LinkedList<>();
+        chain.add(locomotive);
+        chain.add(coupe);
+        chain.add(rs);
+        chain.add(platform);
+        chain.add(cistern);
+
+        chain.forEach((t) -> {
+//            System.out.print(t.getClass());
+            System.out.print("[" + t.getClass().toString().substring(22) + "]");
+
+        });
+
+        System.out.println("\n");
+
+/*        locomotive.adding();
+        coupe.adding();
+        rs.adding();
+        platform.adding();
+        cistern.adding();
+        System.out.println(""); */
+
+        if (locomotive.getPower() > (coupe.getWeight() + rs.getWeight() + platform.getWeight() + cistern.getWeight())) {
+            System.out.println("The power of this locomotive is sufficient for wagon chain's weight\n");
+        } else {
+            System.out.println("This locomotive will not be able to take the train chain\n");
+        }
+    }
+
+}
