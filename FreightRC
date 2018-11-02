@@ -1,0 +1,11 @@
+package railwaycarriage;
+
+import java.util.ArrayList;
+
+public class FreightRC extends RailwayCarriage {
+
+    ArrayList<String> freightWagon = new ArrayList<>();
+
+    void adding() {
+    }
+}
